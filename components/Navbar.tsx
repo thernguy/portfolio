@@ -7,7 +7,7 @@ interface NavbarProps {
 const Navbar: FC<NavbarProps> = (props) => {
   const name = "Mamun Mahmood";
   return (
-    <div className="w-full h-[104px] mb-[100px]  flex justify-between items-start py-[20px]">
+    <div className="w-full h-[104px] mb-[42px]  flex justify-between items-start py-[20px]">
       <p className="text-6">
         <span
           style={{
