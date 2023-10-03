@@ -78,7 +78,7 @@ export default function Home() {
             alt={user.name}
             width={200}
             height={200}
-            className="mt-[-25%] aspect-square rounded"
+            className="mt-[-25%] aspect-square rounded-[20px]"
           />
           <div className="flex flex-col text-center">
             <h1 className="text-[28px] font-bold">{user.name}</h1>
@@ -89,6 +89,7 @@ export default function Home() {
           <div className="flex justify-around w-full ">
             {socialLinks.map((socialLink) => (
               <a
+                key={socialLink.name}
                 href={socialLink.url}
                 className="text-sm text-[#000] hover:text-[#000] transition-colors bg-[#F2F5F9] p-3 rounded-xl"
               >
@@ -104,7 +105,10 @@ export default function Home() {
           {/* contacts */}
           <div className="bg-[#F2F5F9]  flex flex-col gap-5 w-full p-9 rounded-2xl">
             {contacts.map((contact) => (
-              <div className="flex  items-center gap-10  border-b-2 pb-5">
+              <div
+                key={contact.name}
+                className="flex  items-center gap-10  border-b-2 pb-5"
+              >
                 <Image
                   src={contact.image}
                   alt={contact.name}
@@ -174,6 +178,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-5">
               {whatIDo.map((item, index) => (
                 <div
+                  key={index}
                   className={`h-[170px] bg-[${
                     index % 2 === 0 ? "#F2F7FC" : "#FFEBD1"
                   }] flex-col gap-5`}
