@@ -1,44 +1,49 @@
-import { FC } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
-interface NavbarProps {
-  // Define your component props here
-}
-
-const Navbar: FC<NavbarProps> = (props) => {
-  const name = "Mamun Mahmood";
+const navBtns = [
+  {
+    name: "Home",
+    url: "/",
+    icon: "/images/home-icon.svg",
+  },
+  {
+    name: "Resume",
+    url: "/resume",
+    icon: "/images/resume-icon.svg",
+  },
+  {
+    name: "Works",
+    url: "/works",
+    icon: "/images/work-icon.svg",
+  },
+  {
+    name: "Contact",
+    url: "/contact",
+    icon: "/images/contact-icon.svg",
+  },
+];
+const Navbar = () => {
   return (
-    <div className="w-full h-[104px] mb-[42px]  flex justify-between items-start py-[20px]">
-      <p className="text-6">
-        <span
-          style={{
-            color: "#000",
-            fontFamily: "Pacifico",
-            fontSize: "24px",
-            fontStyle: "normal",
-            fontWeight: "400",
-            lineHeight: "normal",
-          }}
-        >
-          {name.slice(0, 5)}
-        </span>
-        <span
-          style={{
-            background: "linear-gradient(91deg, #FF9C1A 7.92%, #E80505 108.2%)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            fontFamily: "Pacifico",
-            fontSize: "24px",
-            fontStyle: "normal",
-            fontWeight: "400",
-            lineHeight: "normal",
-          }}
-        >
-          {name.slice(5, 13)}
-        </span>
-      </p>
-      <button>{"</>"}</button>
-    </div>
+    <nav className="flex justify-end sticky">
+      <div className="flex justify-between items-center max-w-[500px] h-[100px] px-8 shadow-md rounded-[20px] gap-10 ">
+        {navBtns.map((item, index) => (
+          <Link
+            href={item.url}
+            key={index}
+            className="bg-[#E1E8EF] h-20 w-20 text-center flex flex-col items-center justify-center rounded-[20px] p-5 hover:bg-[#FF9C1A] "
+          >
+            <Image
+              src={item.icon}
+              alt={item.name}
+              width={20}
+              height={20}
+            />
+            {item.name}
+          </Link>
+        ))}
+      </div>
+    </nav>
   );
 };
 

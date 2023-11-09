@@ -25,8 +25,8 @@ export default function Home() {
     },
   ];
   return (
-    <section className="md:w-[70%] bg-[#fff] rounded-[20px]">
-      <div className="flex flex-col gap-10 p-10">
+    <aside className="w-full bg-[#fff] rounded-[20px] flex flex-col gap-10 p-10">
+      
         <div className="flex flex-col gap-5">
           <h1 className="text-[#0B0909] text-[28px] font-bold">About Me</h1>
           <p className="text-[#0B0909] text-lg">
@@ -76,7 +76,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      
+    </aside>
   );
 }
