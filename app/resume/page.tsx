@@ -3,7 +3,7 @@ const page= () => {
 
   return (
     <aside className="w-full bg-[#fff] rounded-[20px] p-10">
-      <h1 className="w-full text-[#0B0909] text-[28px] font-bold flex items-center gap-5">
+      <h1 className="w-full text-[#0B0909] text-[28px] font-bold ">
         Resume{" "}
         <span className="w-full">
           <hr
@@ -13,6 +13,7 @@ const page= () => {
               strokeWidth: "2px",
               stroke: "#FE9119",
               width: "100%",
+              marginTop: "10px"
             }}
           />
         </span>

@@ -5,22 +5,22 @@ const navBtns = [
   {
     name: "Home",
     url: "/",
-    icon: "/images/home-icon.svg",
+    icon: "/icons/home-icon.svg",
   },
   {
     name: "Resume",
     url: "/resume",
-    icon: "/images/resume-icon.svg",
+    icon: "/icons/resume-icon.svg",
   },
   {
     name: "Works",
     url: "/works",
-    icon: "/images/work-icon.svg",
+    icon: "/icons/work-icon.svg",
   },
   {
     name: "Contact",
     url: "/contact",
-    icon: "/images/contact-icon.svg",
+    icon: "/icons/contact-icon.svg",
   },
 ];
 const Navbar = () => {

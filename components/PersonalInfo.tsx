@@ -75,7 +75,7 @@ const PersonalInfo: FC<IProfileInfoProps> = ({
                             }}
                         >
                             <Image
-                                src="/images/download.svg"
+                                src="/icons/download.svg"
                                 alt="download"
                                 width={20}
                                 height={20}

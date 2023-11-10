@@ -19,39 +19,39 @@ const socialLinks = [
   {
     name: "GitHub",
     url: "http://github.com/mamun-mahmood",
-    image: "/images/github.svg",
+    image: "/icons/github.svg",
   },
   {
     name: "Twitter",
     url: "http://twitter.com/mamunmahmood",
-    image: "/images/twitter.svg",
+    image: "/icons/twitter.svg",
   },
   {
     name: "LinkedIn",
     url: "http://linkedin.com/in/mamunmahmood",
-    image: "/images/linkedin.svg",
+    image: "/icons/linkedin.svg",
   },
   {
     name: "Email",
     url: "mailto",
-    image: "/images/email.svg",
+    image: "/icons/email.svg",
   },
 ];
 const contacts = [
   {
     value: "8801799464391",
     name: "Phone",
-    image: "/images/phone.svg",
+    image: "/icons/phone.svg",
   },
   {
     value: "mamamun1999@gamil.com",
     name: "Email",
-    image: "/images/email-orange.svg",
+    image: "/icons/email-orange.svg",
   },
   {
     value: "Dhaka, Bangladesh",
     name: "Location",
-    image: "/images/location.svg",
+    image: "/icons/location.svg",
   },
 ];
 export default function RootLayout({
