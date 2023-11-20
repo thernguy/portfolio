@@ -1,3 +1,4 @@
+"use client"
 import { IProfileInfoProps, IResume } from '@/utils/types';
 import Image from 'next/image';
 import { FC } from 'react';
@@ -10,6 +11,10 @@ const PersonalInfo: FC<IProfileInfoProps> =  ({
     socialLinks,
     contacts,
 }) => {
+    const handleDownload = () => {
+        const drivedownloadLink = "https://drive.google.com/u/0/uc?id=1PDzFr_h3gYAgcxQuHvSl_OZclGjZ23k3&export=download"
+        window.open(drivedownloadLink, "_blank")
+    }
     return (
 
         <LeftWrapper>
@@ -95,19 +100,22 @@ const PersonalInfo: FC<IProfileInfoProps> =  ({
                             background:
                                 "linear-gradient(91deg, #FF9C1A 7.92%, #E80505 108.2%)",
                             height: "40px",
-                            width: "185px",
+                            width: "200px",
                             textAlign: "center",
                             display: "flex",
                             gap: "10px",
                         }}
+                        onClick={handleDownload}
                     >
                         <Image
-                            src="/images/download.svg"
+                            src="/icons/download.svg"
                             alt="download"
                             width={20}
                             height={20}
                         />
-                        <span className="text-sm font-bold">Download CV</span>
+                        <span className="text-sm font-bold"
+
+                        >Download Resume</span>
                     </button>
                 </div>
             </div>

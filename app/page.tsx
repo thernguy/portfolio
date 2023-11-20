@@ -2,7 +2,7 @@ import PersonalInfo from "@/components/PersonalInfo";
 import RightWrapper from "@/components/RightWrapper";
 import Image from "next/image";
 
-export default function Home({ repo }: any) {
+export default function Home() {
   const whatIDo = [
     {
       name: "Frontend Development",

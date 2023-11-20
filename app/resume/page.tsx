@@ -25,7 +25,6 @@ const Title = (props: any) => {
 const page = async () => {
   const resume = await getResume();
   const {
-    contacts,
     objective,
     skills,
     experience,
