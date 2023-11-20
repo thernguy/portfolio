@@ -18,7 +18,7 @@ const PersonalInfo: FC<IProfileInfoProps> =  ({
                 alt={name}
                 width={200}
                 height={200}
-                className="md:mt-[-50%] aspect-square rounded-[20px]"
+                className="md:mt-[-45%] aspect-square rounded-[20px]"
             />
             <div className="flex flex-col text-center">
                 <h1 className="text-[28px] font-bold">
