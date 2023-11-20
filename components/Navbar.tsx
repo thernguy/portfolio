@@ -27,7 +27,7 @@ const Navbar = () => {
   
   return (
     <nav className="flex justify-center sm:justify-end fixed sm:static bottom-0 w-screen sm:w-auto left-0 ">
-      <div className="flex justify-between items-center bg-[#fff] w-full max-w-[500px] px-4 py-1 sm:px-8 sm:py-4 shadow-lg border-[#FE9119] border-t-2 sm:border-none sm:rounded-[20px] gap-4">
+      <div className="flex justify-around items-center bg-[#fff] w-full max-w-[500px] sm:py-2 shadow-lg border-[#FE9119] border-t-2 sm:border-none sm:rounded-[20px] ">
         {navBtns.map((item, index) => (
           <Link
             href={item.url}

@@ -1,25 +1,15 @@
-import { IProfileInfoProps } from '@/utils/types';
+import { IProfileInfoProps, IResume } from '@/utils/types';
 import Image from 'next/image';
 import { FC } from 'react';
 import LeftWrapper from './LeftWrapper';
 
-const PersonalInfo: FC<IProfileInfoProps> = ({
+const PersonalInfo: FC<IProfileInfoProps> =  ({
     profilePicture,
     name,
     bio,
     socialLinks,
-    contacts
+    contacts,
 }) => {
-    const fetchData = async () => {
-        const response = await fetch(`https://api.github.com/repos/mamun-mahmood/mamun-mahmood/contents/personalInfo.js`, {
-            headers: {
-                'Accept': 'application/vnd.github.VERSION.raw'
-            }
-        });
-        const data = await response.text();
-        return data;
-    }
-    // console.log('fetchData', fetchData());
     return (
 
         <LeftWrapper>
