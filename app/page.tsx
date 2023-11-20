@@ -175,7 +175,7 @@ export default function Home() {
   return (
     <>
       <PersonalInfo {...user} socialLinks={socialLinks} contacts={contacts} />
-      <RightWrapper>
+      <RightWrapper className='mt-10 md:mt-0'>
         <div className="flex flex-col gap-5">
           <h1 className="text-[#0B0909] text-[28px] font-bold">About Me <span className="w-full">
             <hr

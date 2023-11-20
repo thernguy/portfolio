@@ -70,7 +70,7 @@ const page = async () => {
       <LeftWrapper className="d-none sm:block">
         <Skills soft={soft} tech={tech} tools={tools} />
       </LeftWrapper>
-      <RightWrapper className='mt-0'>
+      <RightWrapper >
         {/* objective */}
         <Title title="Objective" />
         <p className=" ">{objective}</p>

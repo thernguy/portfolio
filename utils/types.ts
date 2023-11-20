@@ -69,4 +69,10 @@ interface MyObject {
     extraCurricular: string[];
     education: Education;
   }
-  
+  export interface IWorks {
+    title: string;
+    description: string;
+    images: string[];
+    techs: string[];
+    url: string;
+  }
