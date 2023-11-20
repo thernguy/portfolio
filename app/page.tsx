@@ -174,74 +174,73 @@ export default function Home({ repo }: any) {
 
   return (
     <>
-
       <PersonalInfo {...user} socialLinks={socialLinks} contacts={contacts} />
       <RightWrapper>
         <div className="flex flex-col gap-5">
-        <h1 className="text-[#0B0909] text-[28px] font-bold">About Me <span className="w-full">
-          <hr
-            style={{
-              backgroundColor: "#FE9119",
-              height: "4px",
-              strokeWidth: "2px",
-              stroke: "#FE9119",
-              width: "100%",
-              marginTop: "10px"
-            }}
-          />
-        </span></h1>
-        <p className="text-[#0B0909] text-lg">
-          Experienced Software Developer with a proven track record in freelancing and remote positions for two
-          years, specializing in full-stack development. Seeking a challenging role to leverage my technical
-          expertise and collaborative skills in delivering high-quality software solutions.
-        </p>
-      </div>
-      <div className="flex flex-col gap-5">
-        <h1 className="text-[#0B0909] text-[28px] font-bold">What I do!</h1>
-        <div className="grid md:grid-cols-2 gap-10">
-          {whatIDo.map(({ image, name, techs }, index) => (
-            <div
-              key={name}
-              className={`h-[170px] bg-[${index % 2 === 0 ? "#F2F7FC" : "#FFEBD1"
-                }] flex-col gap-5 overflow-y-scroll hide-scrollbar `}
-            >
-              <div className="flex items-center gap-7">
-                <Image
-                  src={image}
-                  alt={name}
-                  width={50}
-                  height={50}
-                />
-                <h1 className="text-[#0B0909] text-lg font-bold">
-                  {name}
-                </h1>
-              </div>
-              <hr
-                className="w-full my-2 bg-[#FE9119] h-[3px] "
-              />
-              <div className="grid md:grid-cols-2 mt-1 p-2 gap-2">
-                {techs.map(({ name: techName, image, url }) => (
-                  <div className="flex items-center gap-5" key={techName}>
-                    <Image
-                      src={image}
-                      alt={techName}
-                      width={50}
-                      height={50}
-
-                    />
-                    {name === "Write Technical Blogs" ? <a target="blank" className="text-[#0B0909] text-md font-bold cursor-pointer" href={url}>
-                      {name}
-                    </a> : <p className="text-[#0B0909] text-md font-bold"> {techName}</p>}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+          <h1 className="text-[#0B0909] text-[28px] font-bold">About Me <span className="w-full">
+            <hr
+              style={{
+                backgroundColor: "#FE9119",
+                height: "4px",
+                strokeWidth: "2px",
+                stroke: "#FE9119",
+                width: "100%",
+                marginTop: "10px"
+              }}
+            />
+          </span></h1>
+          <p className="text-[#0B0909] text-lg">
+            Experienced Software Developer with a proven track record in freelancing and remote positions for two
+            years, specializing in full-stack development. Seeking a challenging role to leverage my technical
+            expertise and collaborative skills in delivering high-quality software solutions.
+          </p>
         </div>
-      </div>
+        <div className="flex flex-col gap-5 mt-2">
+          <h1 className="text-[#0B0909] text-[28px] font-bold">What I do!</h1>
+          <div className="grid md:grid-cols-2 gap-10">
+            {whatIDo.map(({ image, name, techs }, index) => (
+              <div
+                key={name}
+                className={`h-[180px] bg-[${index % 2 === 0 ? "#F2F7FC" : "#FFEBD1"
+                  }] flex-col gap-5 overflow-y-scroll hide-scrollbar `}
+              >
+                <div className="flex items-center gap-7">
+                  <Image
+                    src={image}
+                    alt={name}
+                    width={50}
+                    height={50}
+                  />
+                  <h1 className="text-[#0B0909] text-lg font-bold">
+                    {name}
+                  </h1>
+                </div>
+                <hr
+                  className="w-full my-2 bg-[#FE9119] h-[3px] "
+                />
+                <div className="grid md:grid-cols-2 mt-1 p-2 gap-2">
+                  {techs.map(({ name: techName, image, url }) => (
+                    <div className="flex items-center gap-5" key={techName}>
+                      <Image
+                        src={image}
+                        alt={techName}
+                        width={50}
+                        height={50}
+
+                      />
+                      {name === "Write Technical Blogs" ? <a target="blank" className="text-[#0B0909] text-md font-bold cursor-pointer" href={url}>
+                        {name}
+                      </a> : <p className="text-[#0B0909] text-md font-bold"> {techName}</p>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
 
-    </RightWrapper >
+      </RightWrapper >
     </>
   );
 }

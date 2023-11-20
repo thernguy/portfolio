@@ -1,6 +1,6 @@
 
 import LeftWrapper from '@/components/LeftWrapper';
-import { getPersonalInfo, getResume } from '../layout';
+import { getResume } from '../layout';
 import { IResume } from '@/utils/types';
 import Image from 'next/image';
 import RightWrapper from '@/components/RightWrapper';
@@ -23,7 +23,6 @@ const Title = (props: any) => {
   )
 }
 const page = async () => {
-  const viewerUrl = `https://drive.google.com/file/d/19wrl3zEnA3Z-rCf9mJ0G2TaK5ZHD2Vtb/preview`;
   const resume = await getResume();
   const {
     contacts,

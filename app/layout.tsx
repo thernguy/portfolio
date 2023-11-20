@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} >
-        <div className="max-w-screen-2xl w-screen ">
+        <div className="max-w-screen-2xl w-screen p-2 sm:p-4 ">
           <Navbar />
-          <main className="h-[700px] w-full md:flex gap-5 mt-5 ">
+          <main className="h-[79vh] w-full md:flex gap-5 md:mt-5 ">
             {children}
           </main>
         </div>
