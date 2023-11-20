@@ -139,7 +139,7 @@ export default function Home() {
     },
     {
       name: "Twitter",
-      url: "http://twitter.com/mamunmahmood",
+      url: "http://twitter.com/mamunmah",
       image: "/icons/twitter.svg",
     },
     {

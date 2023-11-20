@@ -22,6 +22,36 @@ const Title = (props: any) => {
     </>
   )
 }
+const Skills = (props: any) => {
+  const { soft, tech, tools } = props
+  return (<><Title title="Skills" />
+    <div className="flex flex-wrap gap-5 ">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-[#0B0909] text-[18px] font-bold">Techs</h1>
+        <ul className="list-disc list-inside flex flex-wrap gap-2">
+          {tech.map((skill: string) => (
+            <li key={skill} className=" ">{skill}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="flex flex-col gap-2">
+        <h1 className="text-[#0B0909] text-[18px] font-bold">Softs</h1>
+        <ul className="list-disc list-inside flex flex-wrap gap-2">
+          {soft.map((skill: string) => (
+            <li key={skill} className=" ">{skill}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="flex flex-col gap-2">
+        <h1 className="text-[#0B0909] text-[18px] font-bold">Tools</h1>
+        <ul className="list-disc list-inside flex flex-wrap gap-2">
+          {tools.map((skill: string) => (
+            <li key={skill} className="  ">{skill}</li>
+          ))}
+        </ul>
+      </div>
+    </div></>)
+}
 const page = async () => {
   const resume = await getResume();
   const {
@@ -37,41 +67,17 @@ const page = async () => {
   const { cgpa, courseWorks, creditedScore, degree, duration, school } = education
   return (
     <>
-      <LeftWrapper>
-
-        {/* skills */}
-        <Title title="Skills" />
-        <div className="flex flex-wrap gap-5 ">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-[#0B0909] text-[18px] font-bold">Techs</h1>
-            <ul className="list-disc list-inside flex flex-wrap gap-2">
-              {tech.map((skill) => (
-                <li key={skill} className=" ">{skill}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="flex flex-col gap-2">
-            <h1 className="text-[#0B0909] text-[18px] font-bold">Softs</h1>
-            <ul className="list-disc list-inside flex flex-wrap gap-2">
-              {soft.map((skill) => (
-                <li key={skill} className=" ">{skill}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="flex flex-col gap-2">
-            <h1 className="text-[#0B0909] text-[18px] font-bold">Tools</h1>
-            <ul className="list-disc list-inside flex flex-wrap gap-2">
-              {tools.map((skill) => (
-                <li key={skill} className="  ">{skill}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <LeftWrapper className="d-none sm:block">
+        <Skills soft={soft} tech={tech} tools={tools} />
       </LeftWrapper>
-      <RightWrapper>
+      <RightWrapper className='mt-0'>
         {/* objective */}
         <Title title="Objective" />
         <p className=" ">{objective}</p>
+        {/* skill in mobile view */}
+        <div className="sm:hidden my-2">
+          <Skills soft={soft} tech={tech} tools={tools} />
+        </div>
         {/* experience */}
         <div className="w-full my-2">
           <Title title="Experience" />
@@ -91,13 +97,13 @@ const page = async () => {
               <a href={url} target='blank' ><Image alt={name} src={image} width={120} height={60} /> </a>
               <p className=" ">{description}</p>
               <p className='font-bold'>Techs: {""}</p>
-              <ul className='list-disc list-inside flex flex-wrap gap-5'>
+              <ul className='list-disc list-inside flex flex-wrap gap-2'>
                 {techs.map((tech) => (
                   <li key={tech} className=" ">{tech}</li>
                 ))}
               </ul>
               <p className='font-bold'>Works: {""}</p>
-              <ul className='list-disc list-inside flex flex-wrap gap-5'>
+              <ul className='list-disc list-inside flex flex-wrap gap-2'>
                 {works.map((tech) => (
                   <li key={tech} className=" ">{tech}</li>
                 ))}

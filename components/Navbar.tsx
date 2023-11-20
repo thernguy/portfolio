@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 const navBtns = [
   {
     name: "Home",
@@ -23,7 +25,8 @@ const navBtns = [
   },
 ];
 const Navbar = () => {
-  // get current path
+  const [active, setActive] = useState(0);
+
   
   return (
     <nav className="flex justify-center sm:justify-end fixed sm:static bottom-0 w-screen sm:w-auto left-0 ">
@@ -32,7 +35,8 @@ const Navbar = () => {
           <Link
             href={item.url}
             key={index}
-            className="md:bg-[#E1E8EF] h-16 w-16 sm:h-20 sm:w-20 text-center flex flex-col items-center justify-center rounded-[20px] p-5 hover:bg-[#FF9C1A] "
+            onClick={() => setActive(index)}
+            className={`h-16 w-16 sm:h-20 sm:w-20 text-center flex flex-col items-center justify-center rounded-[20px] p-5 hover:font-bold ${active === index && "text-[#FE9119]"}`}
           >
             <Image
               src={item.icon}
@@ -41,7 +45,6 @@ const Navbar = () => {
               height={25}
             />
             <pre>{item.name}</pre>
-            {/* {currentPath === item.url && <hr className="w-full my-2 bg-[#FE9119] h-[3px] " />} */}
           </Link>
         ))}
       </div>
