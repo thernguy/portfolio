@@ -2,7 +2,7 @@
 const Header = () => {
   const name = "Mamun Mahmood";
   return (
-    <header className="w-full h-[104px] flex justify-between items-start ">
+    <header className="w-full h-[80px] flex justify-between items-start ">
       <p className="text-6">
         <span
           style={{

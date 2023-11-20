@@ -1,6 +1,8 @@
+import PersonalInfo from "@/components/PersonalInfo";
+import RightWrapper from "@/components/RightWrapper";
 import Image from "next/image";
 
-export default function Home() {
+export default function Home({ repo }: any) {
   const whatIDo = [
     {
       name: "Frontend Development",
@@ -124,10 +126,58 @@ export default function Home() {
       ]
     },
   ];
-  return (
-    <aside className="w-full bg-[#fff] rounded-[20px] flex flex-col gap-10 p-10">
+  const user = {
+    name: "Mamun Mahmood",
+    profilePicture: "https://avatars.githubusercontent.com/u/50637294?v=4",
+    bio: "I'm a software engineer who loves to build things.",
+  };
+  const socialLinks = [
+    {
+      name: "GitHub",
+      url: "http://github.com/mamun-mahmood",
+      image: "/icons/github.svg",
+    },
+    {
+      name: "Twitter",
+      url: "http://twitter.com/mamunmahmood",
+      image: "/icons/twitter.svg",
+    },
+    {
+      name: "LinkedIn",
+      url: "http://linkedin.com/in/mamunmahmood",
+      image: "/icons/linkedin.svg",
+    },
+    {
+      name: "Email",
+      url: "mailto",
+      image: "/icons/email.svg",
+    },
+  ];
+  const contacts = [
+    {
+      value: "8801799464391",
+      name: "Phone",
+      image: "/icons/phone.svg",
+    },
+    {
+      value: "mamamun1999@gamil.com",
+      name: "Email",
+      image: "/icons/email-orange.svg",
+    },
+    {
+      value: "Dhaka, Bangladesh",
+      name: "Location",
+      image: "/icons/location.svg",
+    },
+  ];
 
-      <div className="flex flex-col gap-5">
+
+  return (
+    <>
+
+      <PersonalInfo {...user} socialLinks={socialLinks} contacts={contacts} />
+      <RightWrapper>
+        <div className="flex flex-col gap-5">
         <h1 className="text-[#0B0909] text-[28px] font-bold">About Me <span className="w-full">
           <hr
             style={{
@@ -191,6 +241,7 @@ export default function Home() {
       </div>
 
 
-    </aside>
+    </RightWrapper >
+    </>
   );
 }

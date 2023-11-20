@@ -20,6 +20,7 @@
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "postcss": "latest",
+    "postcss-nesting": "^12.0.1",
     "tailwindcss": "latest",
     "typescript": "latest"
   }
