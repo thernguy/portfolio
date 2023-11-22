@@ -57,14 +57,14 @@ const page = async () => {
   const {
     objective,
     skills,
-    experience,
-    projects,
+    experience=[],
+    projects=[],
     leadership,
-    extraCurricular,
+    extraCurricular=[],
     education
-  } = resume as IResume;
-  const { soft, tech, tools } = skills
-  const { cgpa, courseWorks, creditedScore, degree, duration, school } = education
+  } = resume as IResume || {};
+  const { soft=[], tech=[], tools=[] } = skills || {}
+  const { cgpa, courseWorks=[], creditedScore, degree, duration, school } = education || {}
   return (
     <>
       <LeftWrapper className="d-none sm:block">
