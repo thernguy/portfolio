@@ -147,10 +147,19 @@
       "description": "A RealTime Chat Application. Built with React, MUI and Firebase.",
       "url": "https://chatterfly.vercel.app/",
       "images": [
-        "https://raw.githubusercontent.com/mamun-mahmood/chatterfly/main/docs/Screenshot%20from%202023-08-08%2009-45-25.png?token=GHSAT0AAAAAACJ6EHIKHYRODJ5XOXGVVVTMZK6BJLQ",
-        "https://raw.githubusercontent.com/mamun-mahmood/chatterfly/main/docs/Screenshot%20from%202023-08-08%2009-45-01.png?token=GHSAT0AAAAAACJ6EHIKXLWU67TIICRNSJQWZK6BJNA"
+        "https://raw.githubusercontent.com/mamun-mahmood/chatterfly/main/docs/Screenshot%20from%202023-08-08%2009-45-25.png",
+        "https://raw.githubusercontent.com/mamun-mahmood/chatterfly/main/docs/Screenshot%20from%202023-08-08%2009-45-01.png"
       ],
       "techs": ["React", "Redux", "MUI", "Firebase"]
+    },
+    {
+      "title": "BlueTrade: Dashboard Layout",
+      "description": "A Dashboard Layout built with React, ApexCharts and Vanilla CSS.",
+      "url": "https://bluetrade.vercel.app/",
+      "images": [
+        "https://raw.githubusercontent.com/mamun-mahmood/react-dashboard/main/docs/images/Screenshot%20from%202023-08-31%2020-52-00.png"
+      ],
+      "techs": ["React", "ApexCharts", "Vanilla CSS"]
     }
   ]
 }
