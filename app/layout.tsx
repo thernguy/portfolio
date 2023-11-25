@@ -15,7 +15,11 @@ export const getPersonalInfo = async () => {
   return atob(res.content) || {};
 }
 export const getResume = async () => {
-  const response = await fetch(`https://api.github.com/repos/mamun-mahmood/mamun-mahmood/contents/resume.js`);
+  const response = await fetch(`https://api.github.com/repos/mamun-mahmood/mamun-mahmood/contents/resume.js`, {
+    next: {
+      revalidate: 3600,
+    }
+  });
 
   const res = await response.json();
   return JSON.parse(atob(res.content)) || {};
