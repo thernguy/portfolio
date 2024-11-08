@@ -23,29 +23,53 @@ const Title = (props: any) => {
   )
 }
 const Skills = (props: any) => {
-  const { soft, tech, tools } = props
+  const { libraries, languages, dbAndBackend, tools, designs, softSkills } = props
   return (<><Title title="Skills" />
     <div className="flex flex-wrap gap-5 ">
       <div className="flex flex-col gap-2">
-        <h1 className="text-[#0B0909] text-[18px] font-bold">Techs</h1>
+        <h1 className="text-[#0B0909] text-[18px] font-bold">Languages</h1>
         <ul className="list-disc list-inside flex flex-wrap gap-2">
-          {tech.map((skill: string) => (
+          {languages.map((skill: string) => (
             <li key={skill} className=" ">{skill}</li>
           ))}
         </ul>
       </div>
       <div className="flex flex-col gap-2">
-        <h1 className="text-[#0B0909] text-[18px] font-bold">Softs</h1>
+        <h1 className="text-[#0B0909] text-[18px] font-bold">Libraries</h1>
         <ul className="list-disc list-inside flex flex-wrap gap-2">
-          {soft.map((skill: string) => (
+          {libraries.map((skill: string) => (
             <li key={skill} className=" ">{skill}</li>
           ))}
         </ul>
       </div>
       <div className="flex flex-col gap-2">
+        <h1 className="text-[#0B0909] text-[18px] font-bold">Database & Backend</h1>
+        <ul className="list-disc list-inside flex flex-wrap gap-2">
+          {dbAndBackend.map((skill: string) => (
+            <li key={skill} className="  ">{skill}</li>
+          ))}
+        </ul>
+      </div>
+       <div className="flex flex-col gap-2">
         <h1 className="text-[#0B0909] text-[18px] font-bold">Tools</h1>
         <ul className="list-disc list-inside flex flex-wrap gap-2">
           {tools.map((skill: string) => (
+            <li key={skill} className="  ">{skill}</li>
+          ))}
+        </ul>
+      </div>
+       <div className="flex flex-col gap-2">
+        <h1 className="text-[#0B0909] text-[18px] font-bold">Designs</h1>
+        <ul className="list-disc list-inside flex flex-wrap gap-2">
+          {designs.map((skill: string) => (
+            <li key={skill} className="  ">{skill}</li>
+          ))}
+        </ul>
+      </div>
+         <div className="flex flex-col gap-2">
+        <h1 className="text-[#0B0909] text-[18px] font-bold">Soft Skills</h1>
+        <ul className="list-disc list-inside flex flex-wrap gap-2">
+          {softSkills.map((skill: string) => (
             <li key={skill} className="  ">{skill}</li>
           ))}
         </ul>
