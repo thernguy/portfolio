@@ -127,9 +127,9 @@ export default function Home() {
     },
   ];
   const user = {
-    name: "Mamun Mahmood",
+    name: "Md Al Mamun",
     profilePicture: "https://avatars.githubusercontent.com/u/50637294?v=4",
-    bio: "I'm a software engineer who loves to build things.",
+    bio: "The React Guy 🚀 | MERN Stack Developer | Open Source Enthusiast | Technical Blogger",
   };
   const socialLinks = [
     {

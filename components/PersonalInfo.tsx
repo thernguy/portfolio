@@ -53,7 +53,7 @@ const PersonalInfo: FC<IProfileInfoProps> =  ({
                         {name.slice(5, 13)}
                     </span>
                 </h1>
-                <p className="text-[#0B090980] text-lg">Software Engineer</p>
+                <p className="text-[#0B090980] text-lg">Software Developer</p>
                 <p className="text-[#0B090980]">{bio}</p>
             </div>
             {/* social links */}
