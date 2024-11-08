@@ -18,11 +18,11 @@ const navBtns = [
     url: "/works",
     icon: "/icons/work-icon.svg",
   },
-  {
-    name: "Contact",
-    url: "/contact",
-    icon: "/icons/contact-icon.svg",
-  },
+  // {
+  //   name: "Contact",
+  //   url: "/contact",
+  //   icon: "/icons/contact-icon.svg",
+  // },
 ];
 const Navbar = () => {
   const [active, setActive] = useState(0);

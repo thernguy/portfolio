@@ -129,7 +129,7 @@ export default function Home() {
   const user = {
     name: "Md Al Mamun",
     profilePicture: "https://avatars.githubusercontent.com/u/50637294?v=4",
-    bio: "The React Guy 🚀 | MERN Stack Developer | Open Source Enthusiast | Technical Blogger",
+    bio: "The RN Guy 🚀 | MERN Stack Developer | Open Source Enthusiast | Technical Blogger",
   };
   const socialLinks = [
     {
