@@ -12,46 +12,45 @@ export default function Home() {
         {
           name: "React.js",
           image: "/icons/react.svg",
-          url: ""
+          url: "",
         },
         {
           name: "Next.js",
           image: "/icons/nextjs.svg",
-          url: ""
+          url: "",
         },
 
         {
           name: "JavaScript",
           image: "/icons/javascript.svg",
-          url: ""
+          url: "",
         },
         {
           name: "TypeScript",
           image: "/icons/typescript.svg",
-          url: ""
+          url: "",
         },
         {
           name: "Redux",
           image: "/icons/redux.svg",
-          url: ""
+          url: "",
         },
         {
           name: "Tailwind CSS",
           image: "/icons/tailwind.svg",
-          url: ""
+          url: "",
         },
         {
           name: "Material UI",
           image: "/icons/material.svg",
-          url: ""
+          url: "",
         },
         {
           name: "Bootstrap",
           image: "/icons/bootstrap.svg",
-          url: ""
+          url: "",
         },
-
-      ]
+      ],
     },
     {
       name: "Backend Development",
@@ -89,7 +88,7 @@ export default function Home() {
           image: "/icons/api.svg",
           url: "",
         },
-      ]
+      ],
     },
     {
       name: "Mobile App Development",
@@ -106,7 +105,7 @@ export default function Home() {
           image: "/icons/expo.svg",
           url: "https://expo.dev/@mamunmahmood",
         },
-      ]
+      ],
     },
     {
       name: "Write Technical Blogs",
@@ -123,7 +122,7 @@ export default function Home() {
           image: "/icons/medium.svg",
           url: "https://mamun1999.medium.com/",
         },
-      ]
+      ],
     },
   ];
   const user = {
@@ -149,7 +148,7 @@ export default function Home() {
     },
     {
       name: "Email",
-      url: "mailto",
+      url: "mailto:mamamun1999@gmail.com",
       image: "/icons/email.svg",
     },
   ];
@@ -159,40 +158,44 @@ export default function Home() {
       name: "Phone",
       image: "/icons/phone.svg",
     },
-    {
-      value: "mamamun1999@gamil.com",
-      name: "Email",
-      image: "/icons/email-orange.svg",
-    },
-    {
-      value: "Dhaka, Bangladesh",
-      name: "Location",
-      image: "/icons/location.svg",
-    },
+    // {
+    //   value: "mamamun1999@gamil.com",
+    //   name: "Email",
+    //   image: "/icons/email-orange.svg",
+    // },
+    // {
+    //   value: "Dhaka, Bangladesh",
+    //   name: "Location",
+    //   image: "/icons/location.svg",
+    // },
   ];
-
 
   return (
     <>
       <PersonalInfo {...user} socialLinks={socialLinks} contacts={contacts} />
-      <RightWrapper className='mt-10 md:mt-0'>
+      <RightWrapper className="mt-10 md:mt-0">
         <div className="flex flex-col gap-5">
-          <h1 className="text-[#0B0909] text-[28px] font-bold">About Me <span className="w-full">
-            <hr
-              style={{
-                backgroundColor: "#FE9119",
-                height: "4px",
-                strokeWidth: "2px",
-                stroke: "#FE9119",
-                width: "100%",
-                marginTop: "10px"
-              }}
-            />
-          </span></h1>
+          <h1 className="text-[#0B0909] text-[28px] font-bold">
+            About Me{" "}
+            <span className="w-full">
+              <hr
+                style={{
+                  backgroundColor: "#FE9119",
+                  height: "4px",
+                  strokeWidth: "2px",
+                  stroke: "#FE9119",
+                  width: "100%",
+                  marginTop: "10px",
+                }}
+              />
+            </span>
+          </h1>
           <p className="text-[#0B0909] text-lg">
-            Experienced Software Developer with a proven track record in freelancing and remote positions for two
-            years, specializing in full-stack development. Seeking a challenging role to leverage my technical
-            expertise and collaborative skills in delivering high-quality software solutions.
+            Experienced Software Developer with a proven track record in
+            freelancing and remote positions for two years, specializing in
+            full-stack development. Seeking a challenging role to leverage my
+            technical expertise and collaborative skills in delivering
+            high-quality software solutions.
           </p>
         </div>
         <div className="flex flex-col gap-5 mt-2">
@@ -201,23 +204,15 @@ export default function Home() {
             {whatIDo.map(({ image, name, techs }, index) => (
               <div
                 key={name}
-                className={`h-[180px] bg-[${index % 2 === 0 ? "#F2F7FC" : "#FFEBD1"
-                  }] flex-col gap-5 overflow-y-scroll hide-scrollbar `}
+                className={`h-[180px] bg-[${
+                  index % 2 === 0 ? "#F2F7FC" : "#FFEBD1"
+                }] flex-col gap-5 overflow-y-scroll hide-scrollbar `}
               >
                 <div className="flex items-center gap-7">
-                  <Image
-                    src={image}
-                    alt={name}
-                    width={50}
-                    height={50}
-                  />
-                  <h1 className="text-[#0B0909] text-lg font-bold">
-                    {name}
-                  </h1>
+                  <Image src={image} alt={name} width={50} height={50} />
+                  <h1 className="text-[#0B0909] text-lg font-bold">{name}</h1>
                 </div>
-                <hr
-                  className="w-full my-2 bg-[#FE9119] h-[3px] "
-                />
+                <hr className="w-full my-2 bg-[#FE9119] h-[3px] " />
                 <div className="grid md:grid-cols-2 mt-1 p-2 gap-2">
                   {techs.map(({ name: techName, image, url }) => (
                     <div className="flex items-center gap-5" key={techName}>
@@ -226,11 +221,21 @@ export default function Home() {
                         alt={techName}
                         width={50}
                         height={50}
-
                       />
-                      {name === "Write Technical Blogs" ? <a target="blank" className="text-[#0B0909] text-md font-bold cursor-pointer" href={url}>
-                        {name}
-                      </a> : <p className="text-[#0B0909] text-md font-bold"> {techName}</p>}
+                      {name === "Write Technical Blogs" ? (
+                        <a
+                          target="blank"
+                          className="text-[#0B0909] text-md font-bold cursor-pointer"
+                          href={url}
+                        >
+                          {name}
+                        </a>
+                      ) : (
+                        <p className="text-[#0B0909] text-md font-bold">
+                          {" "}
+                          {techName}
+                        </p>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -238,9 +243,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-
-      </RightWrapper >
+      </RightWrapper>
     </>
   );
 }
